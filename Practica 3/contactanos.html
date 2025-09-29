@@ -1,21 +1,74 @@
 <html>	
-	<head>
-	</head>
+<head>
+    <title>Contáctanos</title>
+    <style>
+        body {
+            margin: 0;
+            background: url("imagenes/fondo.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #03396c;
+        }
 
-        <body background="imagenes/fondo.jpg"   topmargin="0" leftmargin="0">
-        	<center>
-													<table border=0 bgcolor=#098553 width=100% >
-		<tr height=50>
-			<td width=200><a href="index.html">| Inicio </a></td>
-			<td width=200><a href="portafolio_de_servicios.html">| Portafolio de servicios </a></td>
-			<td width=200><a href="consultores.html">| Ingenieros Consultores</a></td>
-			<td width=200><a href="contactanos.html">| Contáctanos </a></td>
-		</tr>
-	</table> 
-<h1>Contáctanos</h1><br>
+        /* Menú estilo igual al index */
+        table.nav {
+            border: 2px dashed #098553;
+            border-radius: 20px;
+            background-color: #f3f6f4;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        table.nav td {
+            text-align: center;
+            padding: 15px;
+        }
+        table.nav a {
+            color: #03396c;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        table.nav a:hover {
+            color: #0ab7d6;
+        }
+        table.nav a:visited {
+            color: #098553;
+        }
 
-<img src="imagenes/contactanos.png" width="300" height="300">
-	</center>
+        /* Encabezado */
+        h1 {
+            margin-top: 20px;
+            color: #098553;
+            font-size: 60px;
+            font-family: "Impact", sans-serif;
+        }
 
-		</body>
+        /* Imagen */
+        .contact-img {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <!-- Menú -->
+        <table class="nav">
+            <tr>
+                <td><a href="index.html">| Inicio </a></td>
+                <td><a href="portafolio_de_servicios.html">| Portafolio de servicios </a></td>
+                <td><a href="consultores.html">| Ingenieros Consultores</a></td>
+                <td><a href="contactanos.html">| Contactanos </a></td>
+            </tr>
+        </table>
+
+        <!-- Título -->
+        <h1>Contactanos</h1>
+
+        <!-- Imagen -->
+        <div class="contact-img">
+            <img src="imagenes/contactanos.png" width="500" height="300">
+        </div>
+    </center>
+</body>
 </html>
