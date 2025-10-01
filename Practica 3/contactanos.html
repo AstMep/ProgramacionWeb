@@ -6,9 +6,10 @@
             margin: 0;
             background: url("imagenes/fondo.jpg") no-repeat center center fixed;
             background-size: cover;
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
             color: #03396c;
         }
+
 
         /* Menú estilo igual al index */
         table.nav {
@@ -42,7 +43,18 @@
             font-size: 60px;
             font-family: "Impact", sans-serif;
         }
-
+        input{
+            color: #f3f6f4;
+            background-color :#0ab7d6;
+            border: 2px solid color #03396c;
+             border-radius:5px;
+        }
+       input[type=submit]{
+            color: #f3f6f4;
+            background-color :#098553;
+            border: 2px solid color #098553;
+             border-radius:5px;
+        }
         /* Imagen */
         .contact-img {
             margin-top: 20px;
@@ -70,5 +82,53 @@
             <img src="imagenes/contactanos.png" width="500" height="300">
         </div>
     </center>
+
+
+
+<form><center><table >
+
+    <tr height="60">
+        <td width="100" >Ingresa tu Nombre:</td>
+        <td width="80"><input type="text" name="nombre_persona"></td>
+         <td width="250" >Ingresa su Estado Civil:</td>
+        <td width="250"> <select name="edocivil">
+            <option value="casado">Casado**</option>
+            <option value="soltero">Soltero**</option>
+            <option value="viudo">Viudo**</option>
+        </td>
+	</tr>
+
+    <tr height="100">
+        <td width="100" >Ingresa su Apellido Paterno:</td>
+        <td width="100"> <input type="text" name="apellidop_persona"></td>
+                <td width="250" >Ingresa su Género:</td>
+        <td width="250"> <input type="radio" name="genero" value="masculino">Masculino<br>
+        <input type="radio" name="genero" value="femenino">Femenino    
+        </td>
+	</tr>
+
+    <tr height="80">
+        <td width="100" >Ingresa su Apellido Materno:</td>
+        <td width="100"><input type="text" name="apellidom_persona"></td>
+	</tr>
+
+
+    <tr height="80">
+        <td width="250" >Ingresa su correo electronico:</td>
+        <td width="250"><input type="email" name="correo"></td>
+	</tr>
+
+        <tr height="80">
+        <td width="150" >Ingresa su contrasena:</td>
+        <td width="80"><input type="password" name="contrasena"></td>
+	</tr>
+  <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Enviar">
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </form>
 </body>
 </html>
