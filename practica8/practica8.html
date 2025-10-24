@@ -1,0 +1,130 @@
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Inventario</title>
+    <link rel="stylesheet" href="diseño.css">
+
+    <script>
+        serie = prompt("Ingresa el numero de serie" );
+        categoria = prompt("Ingresa la categoria");
+        nombre = prompt("Ingresa el nombre");
+        descripcion = prompt("Ingresa la descripcion");
+        precio = prompt("Ingresa el precio");
+        cantidad = prompt("Ingresa la cantidad");
+
+        // Función para obtener imagen según CURP
+        function obtenerFoto(serie) {
+        switch (serie) {
+            case "1AB":
+            return "imagenes/simi-removebg-preview.png";
+            case "2AB":
+            return "imagenes/simi_apfel-removebg-preview.png";
+            case "3AB":
+            return "imagenes/pastillas-removebg-preview.png";
+            case "4AB":
+            return "imagenes/images-removebg-preview.png"   ;
+            case "5AB":
+            return  "imagenes/gelasimi-removebg-preview.png" ; 
+            default:
+            return
+        }
+        }
+
+    
+        document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("Serie").textContent = serie;
+        document.getElementById("Categoria").textContent = categoria;
+        document.getElementById("Nombre").textContent = nombre;
+        document.getElementById("Descripcion").textContent = descripcion;
+        document.getElementById("Precio").textContent = precio;
+        document.getElementById("Cantidad").textContent = cantidad;
+        document.getElementById("Foto").innerHTML = `<img src="${obtenerFoto(serie)}" alt="foto${serie}" width="80">`;
+        });
+        
+    </script>
+
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<body>
+   
+    <form><center><table >
+
+    <tr height="60">
+        <td width="100" >Ingresa tu Nombre:</td>
+        <td width="250"><input type="text" name="nombre_persona"></td>
+         <td width="250" >Ingresa su Estado Civil:</td>
+        <td width="250"> <select name="edocivil">
+            <option value="casado">Casado**</option>
+            <option value="soltero">Soltero**</option>
+            <option value="viudo">Viudo**</option>
+        </td>
+	</tr>
+
+    <tr height="100">
+        <td width="100" >Ingresa su Apellido Paterno:</td>
+        <td width="250"> <input type="text" name="apellidop_persona"></td>
+                <td width="250" >Ingresa su Género:</td>
+        <td width="250"> <input type="radio" name="genero" value="masculino">Masculino<br>
+        <input type="radio" name="genero" value="femenino">Femenino    
+        </td>
+	</tr>
+
+    <tr height="100">
+        <td width="100" >Ingresa su Apellido Materno:</td>
+        <td width="250"><input type="text" name="apellidom_persona"></td>
+        <td width="100" >Ingresa sus pasatiempos deportivos:</td>
+
+	</tr>
+
+
+    <tr height="100">
+        <td width="290" >Ingresa su correo electronico:</td>
+        <td width="250"><input type="email" name="correo"></td>
+                <td width="100" >
+        <input type="checkbox" name="pasa" value="futbol">Futbol<br>
+        <input type="checkbox" name="pasa" value="tenis">Tenis<br>
+        <input type="checkbox" name="pasa" value="beis">Beisball<br>
+        </td>
+	</tr>
+
+        <tr height="80">
+        <td width="150" >Ingresa su contrasena:</td>
+        <td width="80"><input type="password" name="contrasena"></td>
+	</tr>
+  <tr width="450">
+                    <td colspan="2" align="right">
+                        <input type="submit" value="Enviar">
+                    </td>
+                </tr>
+            </table><a href="a"></a>
+    </form>
+
+
+    <table id="tablaResultados" 
+        <tr>
+        <th>Numero de serie</th>
+        <th>Categoria</th>
+        <th>Nombre</th>
+        <th>Foto</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        </tr>
+
+        <tr>
+        <td id="Serie"></td>
+        <td id="Categoria"></td>
+        <td id="Nombre"></td>
+        <td id="Foto"></td>
+        <td id="Descripcion"></td>
+        <td id="Precio"></td>
+        <td id="Cantidad"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -26,11 +26,7 @@
       border-collapse: collapse;
       width: 100%;
     }
-    .data-table th, .data-table td {
-      border: 1px solid #e9d5ff;
-      padding: 1rem;
-      text-align: left;
-    }
+
     .data-table th {
       background-color: #c084fc;
       color: white;
@@ -38,9 +34,7 @@
       font-size: 0.875rem;
       font-weight: 700;
     }
-    .data-table tr:nth-child(even) {
-      background-color: #f3e8ff;
-    }
+ 
   </style>
 </head>
 
@@ -74,7 +68,7 @@ if (curp.endsWith("2")) {
 
     // Escribir el contenido directamente
     document.write("<div class='container'>");
-    document.write("<h1 class='text-3xl font-bold text-center mb-6 main-title'>Personal RH: Cálculo de Nómina Individual</h1>");
+    //document.write("<h1 class='text-3xl font-bold text-center mb-6 main-title'>Personal RH: Cálculo de Nómina Individual</h1>");
 
     document.write("<table class='data-table shadow-lg rounded-xl overflow-hidden mb-8'>");
     document.write("<thead>");
@@ -109,9 +103,17 @@ if (curp.endsWith("2")) {
 
     document.write("</div>");
 
-    
   </script>
 
-  <h1>ISIS ASTRID MEMIJE PERALTA</h1>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HQGSESHBY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4HQGSESHBY');
+</script>
+
 </body>
 </html>
