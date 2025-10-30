@@ -1,0 +1,88 @@
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Inventario</title>
+    <link rel="stylesheet" href="diseño.css">
+    <script>
+    serie = prompt("Ingresa el numero de serie");
+    categoria = prompt("Ingresa la categoria");
+    nombre = prompt("Ingresa el nombre");
+    descripcion = prompt("Ingresa la descripcion");
+    precio = parseInt(prompt("Ingresa el precio"));
+    cantidad =parseInt(prompt("Ingresa la cantidad"));
+    pais=prompt("Pais de origen");
+    precio_total =precio*cantidad
+
+    if(pais !== "mexico"){
+    precio_total = precio_total * 1.10;}
+    function obtenerFoto(serie) {
+    switch (serie) {
+        case "1AB":
+        return "imagenes/simi-removebg-preview.png";
+        case "2AB":
+        return "imagenes/simi_apfel-removebg-preview.png";
+        case "3AB":
+        return "imagenes/pastillas-removebg-preview.png";
+        case "4AB":
+        return "imagenes/images-removebg-preview.png"   ;
+        case "5AB":
+        return  "imagenes/gelasimi-removebg-preview.png" ; 
+        default:
+        return
+    }
+}
+
+        // Esperar a que cargue el documento antes de llenar la tabla
+    document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("Serie").textContent = serie;
+    document.getElementById("Categoria").textContent = categoria;
+    document.getElementById("Nombre").textContent = nombre;
+    document.getElementById("Descripcion").textContent = descripcion;
+    document.getElementById("Precio").textContent = precio;
+    document.getElementById("Cantidad").textContent = cantidad;
+    document.getElementById("Paisdeorigen").textContent = pais;
+    document.getElementById("PrecioTotal").textContent = precio_total;
+    document.getElementById("Foto").innerHTML = `<img src="${obtenerFoto(serie)}" alt="foto ${serie}" width="80">`;
+});
+        
+    </script>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+}
+</style>
+
+</head>
+
+<body>
+    <table id="tablaResultados">
+        <tr>
+        <th>Numero de serie</th>
+        <th>Categoria</th>
+        <th >Nombre</th>
+        <th >Foto</th>
+        <th >Descripcion</th>
+        <th>Precio Unitario</th>
+        <th>Cantidad</th>
+        <th> Pais de origen</th>
+    <th>Precio Total</th> 
+
+        </tr>
+
+        <tr>
+        <td id="Serie"></td>
+        <td id="Categoria"></td>
+        <td id="Nombre"></td>
+        <td id="Foto"></td>
+        <td id="Descripcion"></td>
+        <td id="Precio"></td>
+        <td id="Cantidad"></td>
+        <td id="Paisdeorigen"></td>
+        <td id="PrecioTotal"></td>
+
+    </tr>
+    </table>
+    
+</body>
+</html>
