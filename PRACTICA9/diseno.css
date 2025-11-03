@@ -1,12 +1,16 @@
 body{
     background-color: yellow;
-}
+}a
 
 @media(max-width:1250px){
-
+        body{
+        background-color: cadetblue;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
 }
-@media(min-width:30em)and(max-width:80em){
+@media(max-width: 160px){
     body{
         background-color: purple;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 }
