@@ -6,13 +6,9 @@ echo "Hola que tal ".$nombre."Tu correo es: ".$correo;
 $para=$correo;
 $titulo="prueba";
 
-$cuerpo_delcorreo="Esta es una prueba<br>saludos";
+$mensaje="Esta es una prueba";
 $quienloenvia="rodolfo.mena@yahoo.com";
 $digito_verificador=rand(10,20)
 
-mail($para,$titulo,$quienloenvia);
+mail($para,$titulo,$mensaje,$quienloenvia);
 ?>
-
-estimado rodolfo mena
-gracias por agregarte a la plataforma,su codigo 
-verificacion es:2342
