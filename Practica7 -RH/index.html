@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal RH - Cálculo de Nómina</title>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fcfdff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 40px;
+    }
+    .container {
+      max-width: 90%;
+      width: 1000px;
+    }
+    .main-title {
+      color: #6b21a8;
+    }
+    .data-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .data-table th {
+      background-color: #c084fc;
+      color: white;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+ 
+  </style>
+</head>
+
+<body>
+  <script>
+    // Solicitar datos
+    const nombre = prompt("1. Ingrese el NOMBRE del empleado:");
+    const curp = prompt("2. Ingrese el CURP del empleado (18 caracteres):");
+    const sueldoStr = prompt("3. Ingrese el SUELDO BASE por día:");
+    const diasStr = prompt("4. Ingrese los DÍAS TRABAJADOS:");
+
+    const sueldoBase = parseFloat(sueldoStr) || 0;
+    const diasTrabajados = parseInt(diasStr) || 0;
+
+    // Cálculos
+    const subtotal = sueldoBase * diasTrabajados;
+    const bono = diasTrabajados > 10 ? sueldoBase * 0.30 : 0;
+    const total = subtotal + bono;
+//Idea
+
+ let fotoRuta = "1.jpg";
+
+if (curp.endsWith("2")) {
+  fotoRuta = "2.jpg";
+} else if (curp.endsWith("3")) {
+  fotoRuta = "3.jpg";
+} else if (curp.endsWith("1")) {
+  fotoRuta = "1.jpg";
+}
+
+
+    // Escribir el contenido directamente
+    document.write("<div class='container'>");
+    //document.write("<h1 class='text-3xl font-bold text-center mb-6 main-title'>Personal RH: Cálculo de Nómina Individual</h1>");
+
+    document.write("<table class='data-table shadow-lg rounded-xl overflow-hidden mb-8'>");
+    document.write("<thead>");
+    document.write("<tr>");
+    document.write("<th class='w-12 text-center rounded-tl-xl'>#</th>");
+    document.write("<th class='w-32'>CURP</th>");
+    document.write("<th class='w-16 text-center'>FOTO</th>");
+    document.write("<th class='w-32'>NOMBRE</th>");
+    document.write("<th class='w-20'>SUELDO/Día</th>");
+    document.write("<th class='w-16'>DÍAS</th>");
+    document.write("<th class='w-20'>SUBTOTAL</th>");
+    document.write("<th class='w-20'>BONO</th>");
+    document.write("<th class='w-20 rounded-tr-xl'>TOTAL</th>");
+    document.write("</tr>");
+    document.write("</thead>");
+
+    document.write("<tbody>");
+    document.write("<tr>");
+    document.write("<td class='text-center'>1</td>");
+    document.write("<td>" + (curp || "N/A") + "</td>");
+    document.write("<td class='text-center'><img src='" + fotoRuta + "' width='60' height='60' style='border-radius:50%;'></td>");
+    document.write("<td>" + (nombre || "N/A") + "</td>");
+    document.write("<td>$" + sueldoBase.toFixed(2) + "</td>");
+    document.write("<td>" + diasTrabajados + "</td>");
+    document.write("<td>$" + subtotal.toFixed(2) + "</td>");
+    document.write("<td class='" + (bono > 0 ? "text-green-600 font-bold" : "text-gray-500") + "'>$" + bono.toFixed(2) + "</td>");
+    document.write("<td class='bg-yellow-100 font-extrabold text-lg text-purple-800'>$" + total.toFixed(2) + "</td>");
+    document.write("</tr>");
+    document.write("</tbody>");
+    document.write("</table>");
+
+
+    document.write("</div>");
+
+  </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4HQGSESHBY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4HQGSESHBY');
+</script>
+
+</body>
+</html>
