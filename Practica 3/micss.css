@@ -1,0 +1,61 @@
+    body {
+        margin: 0;
+        background: url("imagenes/fondo.jpg") no-repeat center center fixed;
+        background-size: cover;
+        font-family: "DM+Sans", sans-serif;
+        color: #03396c;
+          font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+            
+    }
+
+    /* Encabezados */
+    H1 {
+        color: #098553;
+        font-size: 80px;
+        font-family: "Impact";
+        margin: 10px 0 0 0;
+    }
+    H3 {
+        color: #0ab7d6;
+        font-size: 50px;
+        margin: 5px 0 20px 0;
+    }
+    H7 {
+        color: #03396c;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* Menú */
+    table.nav {
+        border: 2px dashed #098553;
+        border-radius: 20px;
+        background-color: #f3f6f4;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    table.nav td {
+        text-align: center;
+        padding: 15px;
+    }
+    a {
+        color: #03396c;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    a:hover {
+        color: #0ab7d6;
+    }
+    a:visited {
+        color: #098553;
+    }
+
+    /* Logo */
+    .logo {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
