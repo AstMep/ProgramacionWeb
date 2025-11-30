@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="diseno.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+</head>
+  </head>
+  <body>
+
+    <!-- .<font color="red ">hola1 </font>
+    <font color="orange" size=5> hola2</font>
+    <font color="navy" size="3"> hola3</font> -->
+<script>
+ /*function  ponertexto(cadena,color,tam, alinea){
+  if (alinea=='c')
+ {alinea ="center"}
+ if (alinea =='d')
+ {alinea="right"}
+ if(alinea=='i')
+ {alinea="left"}
+
+ document.write("<p align="+alinea+"> <font color='" + color + "'size='" + tam +"''> "+cadena+"</font> </p>");
+ }
+ponertexto("Saludos a todos","red",7)
+
+ponertexto("Hola","pink",7,"d")*/
+
+
+function ponerTexto(cadena, color, tam, alinea,tipoletra) {
+        let alineacion = "left";
+        if (alinea === "c") alineacion = "center";
+        if (alinea === "d") alineacion = "right";
+
+        
+        let p = document.createElement("p");
+        p.textContent = cadena;
+
+        p.style.color = color;
+        p.style.fontSize = tam + "px";
+        p.style.textAlign = alineacion;
+        p.style.fontFamily=tipoletra;
+
+        
+        document.body.appendChild(p);
+      }
+
+      ponerTexto("Saludos a todos", "#BC0109", 100, "c","Momo Trust Display");
+    
+</script>
+  </body>
